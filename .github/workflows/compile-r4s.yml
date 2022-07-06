@@ -12,7 +12,7 @@ name: OpenWrt-R4s
 on:
   push:
     branches: 
-      - 22.03
+      - openwrt-22.03
   
   workflow_dispatch:
   # schedule:
