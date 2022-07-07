@@ -79,7 +79,7 @@ jobs:
           CONFIG_ARIA2_WEBSOCKET=y
           CONFIG_GNUTLS_ALPN=y
           CONFIG_GNUTLS_ANON=y
-          CONFIG_GNUTLS_DTLS_SRTP=y
+          CONFIG_GNUTLS_DTLS_SRTP=
           CONFIG_GNUTLS_HEARTBEAT=y
           CONFIG_GNUTLS_OCSP=y
           CONFIG_GNUTLS_PSK=y
@@ -270,7 +270,7 @@ jobs:
           CONFIG_PACKAGE_luci-app-firewall=y
           CONFIG_PACKAGE_luci-app-hd-idle=y
           CONFIG_PACKAGE_luci-app-minidlna=y
-          CONFIG_PACKAGE_luci-app-mjpg-streamer=y
+          #CONFIG_PACKAGE_luci-app-mjpg-streamer=y
           CONFIG_PACKAGE_luci-app-opkg=y
           CONFIG_PACKAGE_luci-app-rp-pppoe-server=y
           CONFIG_PACKAGE_luci-app-samba4=y
@@ -291,7 +291,7 @@ jobs:
           CONFIG_PACKAGE_luci-i18n-firewall-zh-cn=y
           CONFIG_PACKAGE_luci-i18n-hd-idle-zh-cn=y
           CONFIG_PACKAGE_luci-i18n-minidlna-zh-cn=y
-          CONFIG_PACKAGE_luci-i18n-mjpg-streamer-zh-cn=y
+          #CONFIG_PACKAGE_luci-i18n-mjpg-streamer-zh-cn=y
           CONFIG_PACKAGE_luci-i18n-opkg-zh-cn=y
           CONFIG_PACKAGE_luci-i18n-rp-pppoe-server-zh-cn=y
           CONFIG_PACKAGE_luci-i18n-samba4-zh-cn=y
@@ -314,7 +314,7 @@ jobs:
           CONFIG_PACKAGE_luci-proto-ppp=y
           CONFIG_PACKAGE_luci-theme-bootstrap=y
           CONFIG_PACKAGE_minidlna=y
-          CONFIG_PACKAGE_mjpg-streamer=y
+          #CONFIG_PACKAGE_mjpg-streamer=y
           CONFIG_PACKAGE_netdata=y
           CONFIG_PACKAGE_ntfs-3g=y
           CONFIG_PACKAGE_rp-pppoe-common=y
