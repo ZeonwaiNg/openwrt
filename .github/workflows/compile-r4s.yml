@@ -106,7 +106,7 @@ jobs:
           CONFIG_PACKAGE_NTFS-3G_HAS_PROBE=y
           CONFIG_PACKAGE_adblock=y
           CONFIG_PACKAGE_aria2=y
-          CONFIG_PACKAGE_attendedsysupgrade-common=y
+          # CONFIG_PACKAGE_attendedsysupgrade-common=y
           CONFIG_PACKAGE_attr=y
           CONFIG_PACKAGE_avahi-dbus-daemon=y
           CONFIG_PACKAGE_block-mount=y
@@ -125,6 +125,7 @@ jobs:
           CONFIG_PACKAGE_collectd-mod-memory=y
           CONFIG_PACKAGE_collectd-mod-network=y
           CONFIG_PACKAGE_collectd-mod-rrdtool=y
+          CONFIG_PACKAGE_collectd-mod-thermal=y
           CONFIG_PACKAGE_containerd=y
           CONFIG_PACKAGE_coreutils=y
           CONFIG_PACKAGE_coreutils-sort=y
@@ -291,7 +292,7 @@ jobs:
           CONFIG_PACKAGE_luci-i18n-firewall-zh-cn=y
           CONFIG_PACKAGE_luci-i18n-hd-idle-zh-cn=y
           CONFIG_PACKAGE_luci-i18n-minidlna-zh-cn=y
-          #CONFIG_PACKAGE_luci-i18n-mjpg-streamer-zh-cn=y
+          # CONFIG_PACKAGE_luci-i18n-mjpg-streamer-zh-cn=y
           CONFIG_PACKAGE_luci-i18n-opkg-zh-cn=y
           CONFIG_PACKAGE_luci-i18n-rp-pppoe-server-zh-cn=y
           CONFIG_PACKAGE_luci-i18n-samba4-zh-cn=y
@@ -314,7 +315,7 @@ jobs:
           CONFIG_PACKAGE_luci-proto-ppp=y
           CONFIG_PACKAGE_luci-theme-bootstrap=y
           CONFIG_PACKAGE_minidlna=y
-          #CONFIG_PACKAGE_mjpg-streamer=y
+          # CONFIG_PACKAGE_mjpg-streamer=y
           CONFIG_PACKAGE_netdata=y
           CONFIG_PACKAGE_ntfs-3g=y
           CONFIG_PACKAGE_rp-pppoe-common=y
