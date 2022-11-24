@@ -3,6 +3,7 @@ include ./common-netgear.mk
 include ./common-senao.mk
 include ./common-tp-link.mk
 include ./common-yuncore.mk
+include ./common-ubnt.mk
 
 DEVICE_VARS += ADDPATTERN_ID ADDPATTERN_VERSION
 DEVICE_VARS += SEAMA_SIGNATURE SEAMA_MTDBLOCK
@@ -2335,6 +2336,29 @@ define Device/rosinson_wr818
 endef
 TARGET_DEVICES += rosinson_wr818
 
+define Device/ruckus_zf73xx_common
+  DEVICE_VENDOR := Ruckus
+  DEVICE_PACKAGES := -swconfig kmod-usb2 kmod-usb-chipidea2
+  IMAGE_SIZE := 31744k
+  LOADER_TYPE := bin
+  KERNEL := kernel-bin | append-dtb | lzma | loader-kernel | uImage none
+  KERNEL_INITRAMFS := kernel-bin | append-dtb | lzma | loader-kernel | uImage none
+endef
+
+define Device/ruckus_zf7321
+  $(Device/ruckus_zf73xx_common)
+  SOC := ar9342
+  DEVICE_MODEL := ZoneFlex 7321[-U]
+endef
+TARGET_DEVICES += ruckus_zf7321
+
+define Device/ruckus_zf7372
+  $(Device/ruckus_zf73xx_common)
+  SOC := ar9344
+  DEVICE_MODEL := ZoneFlex 7352/7372[-E/-U]
+endef
+TARGET_DEVICES += ruckus_zf7372
+
 define Device/samsung_wam250
   SOC := ar9344
   DEVICE_VENDOR := Samsung
@@ -2484,6 +2508,22 @@ define Device/teltonika_rut955-h7v3c0
   DEVICE_VARIANT := H7V3C0
 endef
 TARGET_DEVICES += teltonika_rut955-h7v3c0
+
+define Device/trendnet_tew-673gru
+  SOC := ar7161
+  DEVICE_VENDOR := Trendnet
+  DEVICE_MODEL := TEW-673GRU
+  DEVICE_VARIANT := v1.0R
+  DEVICE_PACKAGES := -uboot-envtools kmod-usb-ohci kmod-usb2 \
+	kmod-owl-loader kmod-switch-rtl8366s
+  IMAGE_SIZE := 7808k
+  FACTORY_SIZE := 6144k
+  IMAGES += factory.bin
+  IMAGE/factory.bin = append-kernel | pad-to $$$$(BLOCKSIZE) | append-rootfs | \
+	pad-rootfs | check-size $$$$(FACTORY_SIZE) | pad-to $$$$(FACTORY_SIZE) | \
+	append-string AP94-AR7161-RT-080619-01
+endef
+TARGET_DEVICES += trendnet_tew-673gru
 
 define Device/trendnet_tew-823dru
   SOC := qca9558
